@@ -1,0 +1,15 @@
+{
+    "name": "stormsq/developer-presenter",
+    "description": "My Pattern of Laravel Project",
+    "type": "library",
+    "require": {
+        "laravel/framework": "^5.0|^6.0|^7.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sten Liao",
+            "email": "liao91826@outlook.com"
+        }
+    ]
+}
