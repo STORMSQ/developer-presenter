@@ -2,6 +2,7 @@
     "name": "stormsq/developer-presenter",
     "description": "My Pattern of Laravel Project",
     "type": "library",
+    
     "require": {
         "laravel/framework": "^5.0|^6.0|^7.0"
     },
@@ -11,5 +12,25 @@
             "name": "Sten Liao",
             "email": "liao91826@outlook.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "STORMSQ\\DeveloperPresenter\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "STORMSQ\\DeveloperPresenter\\DeveloperPresenterProvider"
+            ],
+            "aliases": {
+                "PresenterBuilder": "STORMSQ\\DeveloperPresenter\\PresenterBuilder"
+            }
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
 }
