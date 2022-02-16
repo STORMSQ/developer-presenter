@@ -17,7 +17,7 @@ composer require stormsq/developer-presenter
      STORMSQ\DeveloperPresenter\DeveloperServiceProvider::class,
  ];
 'aliases' => [
-    'ServiceBuilder' => STORMSQ\DeveloperPresenter\ServiceBuilder::class,
+    'PresenterBuilder' => STORMSQ\DeveloperPresenter\PresenterBuilder::class,
  ],
 ```
 
