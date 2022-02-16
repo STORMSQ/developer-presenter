@@ -14,7 +14,7 @@ composer require stormsq/developer-presenter
 
 ```php
 'providers' => [
-     STORMSQ\DeveloperPresenter\DeveloperServiceProvider::class,
+     STORMSQ\DeveloperPresenter\DeveloperPresenterProvider::class,
  ];
 'aliases' => [
     'PresenterBuilder' => STORMSQ\DeveloperPresenter\PresenterBuilder::class,
