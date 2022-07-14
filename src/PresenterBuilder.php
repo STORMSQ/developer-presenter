@@ -46,6 +46,7 @@ class PresenterBuilder{
         $request->request->add($query);
         foreach($remove as $row){
             $request->request->remove($row);
+            $request->query->remove($row);
         }
        
         
