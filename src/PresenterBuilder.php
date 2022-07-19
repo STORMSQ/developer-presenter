@@ -43,7 +43,8 @@ class PresenterBuilder{
         $request = request();
         $original = url()->current();
         
-        $request->request->add($query);
+        //$request->request->add($query);
+        $request->merge($query);
         foreach($remove as $row){
             $request->request->remove($row);
             $request->query->remove($row);
