@@ -11,7 +11,7 @@ class PresenterBuilder{
         foreach ($head as $key=>$row) {
             $html.='<th>';
             $key = preg_replace('/(.+)\[[0-9]+\]/Ux', '\\1', $key);
-            if(strpos($query,'by=asc')!=false){
+            if(preg_match('/by=asc/i',$query)!=false){
                 if(Request::get('sort')==$key){
                     $icon = config('developer-presenter.icon.desc');
                 }else{
@@ -20,7 +20,7 @@ class PresenterBuilder{
                 $href= $current.str_ireplace('asc','desc',preg_replace('/(sort=).*(&)/Ux','sort='.$key.'\\2',$query));
 
                 $html.='<a href="'.$href.'" '.((config('developer-presenter.icon.linkclass'))?'class='.$icon:null).'>'.((config('developer-presenter.icon.useitag'))?'<i class="'.$icon.'"></i>':null).$row.'</a>';	              
-            }elseif(strpos($query,'by=desc')!=false){
+            }elseif(preg_match('/by=desc/i',$query)!=false){
                 if(Request::get('sort')==$key){
                     $icon = config('developer-presenter.icon.asc');
                 }else{
